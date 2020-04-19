@@ -51,23 +51,6 @@ def clientThread(conn, addr):
             except:
                 continue
 
-# def broadcast(message,connection):
-#     print(len(list_of_clients))
-#     for clients in list_of_clients:
-#         # Sends the message of the 'connection client' to the rest of the clients in the chat room
-#         if clients != connection:
-#             try:
-#                 print("Sending the message to client")
-#                 clients.send(message)
-#             except:
-#                 clients.close()
-#                 remove(clients)
-
-# def remove(connection):
-#     if connection in list_of_clients:
-#         list_of_clients.remove(connection)
-
-
 while True:
     conn, addr = server.accept()
     list_of_clients.append(conn)

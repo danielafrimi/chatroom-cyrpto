@@ -57,6 +57,7 @@ def clientThread(conn, addr):
                 continue
 
 def broadcast(message,connection):
+    print(len(list_of_clients))
     for clients in list_of_clients:
         # Sends the message of the 'connection client' to the rest of the clients in the chat room
         if clients != connection:
